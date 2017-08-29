@@ -1,18 +1,21 @@
 var WaterBottle = function(){
   this.volume = 0;
-  
-  this.fill = function(){
+}
+
+WaterBottle.prototype = {
+
+  fill: function (){
     this.volume = 100;
-  }
-  
-  this.drink = function(){
+  },
+
+  drink: function(){
     if ( this.volume >= 10 ){
       this.volume -= 10;
       return 10;
-    };
-  }
+    }
+  },
 
-  this.empty = function(){
+  empty: function(){
     this.volume = 0;
   }
 
